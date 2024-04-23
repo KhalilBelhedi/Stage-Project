@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Marge index{% endblock %}
+
+{% block body %}
+    <h1>Marge index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Marge_achat</th>
+                <th>Marge_vente</th>
+                <th>Date_mise_jour</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for marge in marges %}
+            <tr>
+                <td>{{ marge.id }}</td>
+                <td>{{ marge.margeAchat }}</td>
+                <td>{{ marge.margeVente }}</td>
+                <td>{{ marge.dateMiseJour ? marge.dateMiseJour|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_marge_show', {'id': marge.id}) }}">show</a>
+                    <a href="{{ path('app_marge_edit', {'id': marge.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_marge_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Marge{% endblock %}
+
+{% block body %}
+    <h1>Create new Marge</h1>
+
+    {{ include('marge/_form.html.twig') }}
+
+    <a href="{{ path('app_marge_index') }}">back to list</a>
+{% endblock %}

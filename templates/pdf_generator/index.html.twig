@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example 1</title>
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <style>
+    img
+  {
+    left:50px;
+    top:50px;
+  }
+    </style>
+</head>
+<body>
+<header class="clearfix">
+    <div id="logo">
+    <img src="bhPNG.png">
+        BHbank
+        
+    </div>
+    <h1 align="center">Liste des cours </h1>
+    <hr></hr>
+    <hr></hr>
+    {% for c in ccc %}
+    <div id="company" class="clearfix">
+    <h3>"Marché {{c.Marche.getLibMarche()}}"</h3>
+        <div><span>Code </span>{{ c.Devise.id }}</div>
+        <div><span>Nom de devise</span> {{c.Devise.getLibDevise()}} </div>
+        <div class="alert-danger"><span class="alert-danger">Cours BH achat</span> {{ c.CoursBHAchat}}</div>
+    </div>
+    <div id="project">
+        <div><span>cours BH Vente</span> {{ c.coursBHVente}}</div>
+        <hr></hr>
+        {% endfor %}
+    </div>
+</header>
+
+<hr></hr>
+
+
+</main>
+
+</body>

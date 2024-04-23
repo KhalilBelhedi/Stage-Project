@@ -1,0 +1,40 @@
+<div class="section-wrapper">
+            <div class="container">
+                {{ form_start(form,{'attr': {'novalidate': 'novalidate'}} ) }}
+                    <div class="row">
+                        <div class="col-md-6 wow bounceInLeft">
+
+                            <div class="form-group">
+                                {{ form_widget(form.coursBH_achat, {'attr': {'class': 'form-control input-lg' , 'placeholder':'cours_BH_achat' }}) }}
+                                 <h6 style="color: red"> {{ form_errors(form.coursBH_achat) }} </h6>
+                            
+                           
+                            
+                                {{ form_widget(form.coursBH_vente, {'attr': {'class': 'form-control input-lg' , 'placeholder':'cours_BH_vente' }}) }}
+                                 <h6 style="color: red"> {{ form_errors(form.coursBH_vente) }} </h6>
+
+                                {{ form_widget(form.coursBCT_achat, {'attr': {'class': 'form-control input-lg' , 'placeholder':'cours_BCT_achat' }}) }}
+                                <h6 style="color: red"> {{ form_errors(form.coursBCT_achat) }} </h6>
+
+
+
+                                {{ form_widget(form.coursBCT_vente, {'attr': {'class': 'form-control input-lg' , 'placeholder':'cours_BCT_vente' }}) }}
+                                <h6 style="color: red"> {{ form_errors(form.coursBCT_vente) }} </h6>
+                            
+                          
+                                {{ form_widget(form.date, {'attr': {'class': 'form-control input-lg' , 'placeholder':'date' }}) }}
+                                 <h6 style="color: red"> {{ form_errors(form.date) }} </h6>
+                           
+                                {{ form_widget(form.devise, {'attr': {'class': 'form-control input-lg' , 'placeholder':'devise' }}) }}
+                                 
+                            
+                          
+
+                            
+                            <div class="col-md-6 wow bounceInRight">
+                            
+                            {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary btn-block input-lg' , 'value':'SEND MESSAGE' }}) }}
+                        </div>
+                        </div>
+                            {{ form_end(form) }}
+                          </div>   
